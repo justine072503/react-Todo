@@ -1,0 +1,258 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color:burlywood;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items:first baseline;
+  height: 100vh;
+}
+
+.app {
+  display:contents;
+  justify-content: space-between;
+  background-color: #777;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  max-width: 920px;
+  width: 100%;
+}
+
+.task-creation, .task-list {
+  width: 65%;
+  padding: 20px;
+  background-color: green;
+  border-radius: 16px;
+  border: 1px solid yellowgreen;
+}
+
+.task-creation h1, .task-list h1 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  background-color: #fafafa;
+  color: #333;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:goldenrod;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:active {
+  background-color: gold;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5555;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #7777;
+  margin-bottom: 10px;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+span {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+li input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 1;
+  font-size: 1rem;
+  margin-right: 10px;
+  color: #333;
+  background-color: #fafafa;
+}
+
+li button {
+  background-color: cyan;
+  margin-left: 10px;
+}
+
+li button:hover {
+  background-color: #555;
+}
+
+li button:active {
+  background-color: #222;
+}
+
+@media (max-width: 414px) {
+  .app {
+    flex-direction: column;
+    padding: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .task-creation {
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 20px;
+  }
+
+  .task-list {
+    width: 100%;
+    margin-top: auto;
+    padding: 20px;
+  }
+
+  input[type="text"], select {
+    font-size: 1rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  li input[type="text"] {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* body{
+  background-color: burlywood;
+}
+
+.ToDoList{
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  size: 50px;
+  
+}
+h1{
+  font-size:4rem;
+  color: yellow;
+}
+h2{
+  font-size: large;
+  color:blueviolet;
+}
+button{
+  font-size: 1rem;
+  font-weight:lighter;
+  padding: 10px 20px;
+  color: green;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5 ease;
+}
+.add-button{
+  background-color: hsl(125, 87%, 48%);
+}
+.add-button:hover{
+  background-color: hsl(125, 87%, 30%);
+}
+.delete-button{
+  background-color: hsl(10, 90%, 10%);
+}
+.delete-button:hover{
+  background-color: hsl(10, 90%, 10%); 
+}
+
+.edit-button{
+  background-color: hsl(10, 90%, 10%);
+}
+.edit-button:hover{
+  background-color: hsl(10, 90%, 10%);
+
+  
+}
+/* .move-button{
+  background-color: hsl(200, 47%, 20%);
+}
+.move-button:hover{
+  background-color: hsl(200, 47%, 30%); */
+/* } */
+/* input[type="text"]{
+  font-size: large1.6rem;
+  padding: 10px;
+  border: 2px solid hsla(0%, 0%, 80%, 0.5);
+  border-radius: 5px;
+  color: hsla(0%, 0%, 0%, 0.5);
+}
+ol{
+  padding: 400px;
+  
+
+}
+li{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1px;
+  background-color: hsl(0, 0%, 97%);
+  margin-bottom: 10px;
+  border: solid hsla(0, 0%, 85%, 0.75);
+  border-radius: 5px;
+  display: flex;
+  align-items:center;
+}
+.text{
+  flex: 1;
+}
+.delete-button, .move-button{
+  padding: 12px;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}  */
